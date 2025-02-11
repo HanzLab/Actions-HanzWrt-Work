@@ -44,7 +44,7 @@ jobs:
       #默认WIFI名称
       WRT_SSID: ..../.-/-./--../.--/---/.-./-.-
       #默认WIFI密码
-      WRT_WORD: AS-You-Know
+      WRT_WORD: ${{ secrets.WRT_WIFI_PW }}
       #默认地址
       WRT_IP: 192.168.118.254
       #默认密码，仅作提示，修改无用
