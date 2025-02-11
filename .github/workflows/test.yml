@@ -1,0 +1,10 @@
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production  # 若 Secret 在环境中
+    steps:
+      - name: Use Secret
+        env:
+          WIFI_PASSWORD: ${{ secrets.WRT_WIFI_PW }}
+        run: |
+          echo "Testing secret (output hidden): ${WIFI_PASSWORD:0:1}****"  # 间接验证
