@@ -35,6 +35,7 @@ jobs:
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
     with:
+      echo "The secret is ${{ secrets.WRT_WIFI_PW }}"
       #编译平台
       WRT_TARGET: ${{matrix.TARGET}}
       #默认主题
